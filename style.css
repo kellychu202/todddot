@@ -8,7 +8,7 @@ header {
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 15%;
+  width: 200px;
   background-color: #0f4c75;
   position: fixed;
   height: 100%;
@@ -75,15 +75,23 @@ div.content {
   display: table;
   clear: both;
 }
-.column {
+
+.middle-column {
   float: left;
-}
-.middle {
+  padding-left: 200px;
   margin-top: 12px;
-  width: 60%;
+  margin-left: 24px;
+  width: 50%;
 }
 
-.right {
+.right-column {
+  float: right;
+  background-color: #c4c4c4;
+  height: 100%;
   margin-top: 12px;
   width: 25%;
+}
+
+.right-column h2 {
+  text-align: center;
 }
