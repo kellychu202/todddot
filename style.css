@@ -101,3 +101,8 @@ div.content {
   align-items: center;
   text-align: center;
 }
+
+.right-column p {
+  font-size: 14px;
+  font-weight: normal;
+}
