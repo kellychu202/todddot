@@ -79,23 +79,49 @@ div.content {
   clear: both;
 }
 
-.scheduleContainer {
-    display: grid;
-    grid-gap: 0.2rem;
-
-    grid-template-columns: 5rem repeat(4, 1fr);
-    grid-template-rows: repeat(28, 1fr);
+.middle-column {
+  float: left;
+  padding-left: 200px;
+  margin-top: 12px;
+  margin-left: 24px;
+  width: 50%;
 }
 
+.right-column {
+  float: right;
+  background-color: #c4c4c4;
+  height: 100%;
+  margin-top: 12px;
+  width: 25%;
+}
 
-/**
- * Time
- */
-.time {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-top: thin dotted #ccc;
-    height: 100%;
-    padding: 0 0.5rem;
+.right-column h2 {
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+}
+
+.right-column p {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#dragHere, #dropHere {
+  display: block;
+  height: 24px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: auto;
+  width: 50%
+}
+
+table#centeredT {
+  width:70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.tableRow {
+  height: 14px;
 }

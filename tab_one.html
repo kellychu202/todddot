@@ -21,44 +21,7 @@
       }
     </script>
   </head>
-  <style>
-    .middle-column {
-      float: left;
-      padding-left: 200px;
-      margin-top: 12px;
-      margin-left: 24px;
-      width: 50%;
-    }
 
-    .right-column {
-      float: right;
-      background-color: #c4c4c4;
-      height: 100%;
-      margin-top: 12px;
-      width: 25%;
-    }
-
-    .right-column h2 {
-      font-style: normal;
-      font-weight: bold;
-      align-items: center;
-      text-align: center;
-    }
-
-    .right-column p {
-      font-size: 14px;
-      font-weight: normal;
-    }
-
-    #dragHere, #dropHere {
-      float: left;
-      width: 150px;
-      height: 50px;
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid black;
-    }
-  </style>
   <body>
     <div class="sidebar">
      <a href="index.html">Home</a>
@@ -68,40 +31,113 @@
     <div class="middle-column">
       <h2>Hello Todd, this is tab one!</h2>
 
-      <table>
-        <div class="scheduleContainer">
-          <tr class="time">
-            <tb>8:00</tb>
-            <tb id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
-            </tb>
+      <table id="centeredT" style="width:100%">
+          <tr class="tableRow">
+            <th>Time</th>
+            <th>Activities</th>
           </tr>
-          <tr class="time">9:00</tr>
-          <tr class="time">10:00</tr>
-          <tr class="time">11:00</tr>
-          <tr class="time">12:00</tr>
-          <tr class="time">1:00</tr>
-          <tr class="time">2:00</tr>
-          <tr class="time">3:00</tr>
-          <tr class="time">4:00</tr>
-          <tr class="time">5:00</tr>
-          <tr class="time">6:00</tr>
-          <tr class="time">7:00</tr>
-          <tr class="time">8:00</tr>
-          <tr class="time">9:00</tr>
-          <tr class="time">10:00</tr>
-          <tr class="time">11:00</tr>
-          <tr class="time">12:00</tr>
-        </div>
+          <tr class="tableRow">
+            <td>8:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>9:00</td>
+            <td>
+              <div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+              </div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td>10:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>11:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>12:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>1:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>2:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>3:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>4:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>5:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>6:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>7:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>8:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>9:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
+          <tr class="tableRow">
+            <td>10:00</td>
+            <td><div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div></td>
+          </tr>
       </table>
-
-      <div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
-      </div>
     </div>
+
     <div class="right-column">
       <h2>Events<h2>
       <p>Drag and Drop to Add to Your Day</p>
       <div id="dragHere" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img src="dragtext.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width=150px height=50px>
+        <img src="act_bake.jpg" draggable="true" ondragstart="drag(event)"
+          id="drag1" width=136px height=24px>
+      </div>
+      <div id="dragHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="act_run.jpg" draggable="true" ondragstart="drag(event)"
+          id="drag2" width=136px height=24px>
+      </div>
+      <div id="dragHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="act_nap.jpg" draggable="true" ondragstart="drag(event)"
+          id="drag3" width=136px height=24px>
+      </div>
+      <div id="dragHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="act_games.jpg" draggable="true" ondragstart="drag(event)"
+          id="drag4" width=136px height=24px>
+      </div>
+      <div id="dragHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="act_yoga.jpg" draggable="true" ondragstart="drag(event)"
+          id="drag5" width=136px height=24px>
       </div>
 
     </div>
