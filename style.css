@@ -4,6 +4,9 @@ header {
   text-align: center;
 }
 
+body {
+  font-family: Arial;
+}
 /* The side navigation menu */
 .sidebar {
   margin: 0;
@@ -93,5 +96,8 @@ div.content {
 }
 
 .right-column h2 {
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
   text-align: center;
 }
