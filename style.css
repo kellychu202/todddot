@@ -79,39 +79,23 @@ div.content {
   clear: both;
 }
 
-.middle-column {
-  float: left;
-  padding-left: 200px;
-  margin-top: 12px;
-  margin-left: 24px;
-  width: 50%;
+.scheduleContainer {
+    display: grid;
+    grid-gap: 0.2rem;
+
+    grid-template-columns: 5rem repeat(4, 1fr);
+    grid-template-rows: repeat(28, 1fr);
 }
 
-.right-column {
-  float: right;
-  background-color: #c4c4c4;
-  height: 100%;
-  margin-top: 12px;
-  width: 25%;
-}
 
-.right-column h2 {
-  font-style: normal;
-  font-weight: bold;
-  align-items: center;
-  text-align: center;
-}
-
-.right-column p {
-  font-size: 14px;
-  font-weight: normal;
-}
-
-#dragHere, #dropHere {
-  float: left;
-  width: 150px;
-  height: 50px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
+/**
+ * Time
+ */
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: thin dotted #ccc;
+    height: 100%;
+    padding: 0 0.5rem;
 }

@@ -21,20 +21,81 @@
       }
     </script>
   </head>
+  <style>
+    .middle-column {
+      float: left;
+      padding-left: 200px;
+      margin-top: 12px;
+      margin-left: 24px;
+      width: 50%;
+    }
 
+    .right-column {
+      float: right;
+      background-color: #c4c4c4;
+      height: 100%;
+      margin-top: 12px;
+      width: 25%;
+    }
 
+    .right-column h2 {
+      font-style: normal;
+      font-weight: bold;
+      align-items: center;
+      text-align: center;
+    }
 
+    .right-column p {
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    #dragHere, #dropHere {
+      float: left;
+      width: 150px;
+      height: 50px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
   <body>
     <div class="sidebar">
-      <a href="index.html">Home</a>
+     <a href="index.html">Home</a>
       <a href="tab_one.html" class="active">Daily Schedule</a>
       <a href="tab_two.html">Second</a>
     </div>
     <div class="middle-column">
       <h2>Hello Todd, this is tab one!</h2>
+
+      <table>
+        <div class="scheduleContainer">
+          <tr class="time">
+            <tb>8:00</tb>
+            <tb id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </tb>
+          </tr>
+          <tr class="time">9:00</tr>
+          <tr class="time">10:00</tr>
+          <tr class="time">11:00</tr>
+          <tr class="time">12:00</tr>
+          <tr class="time">1:00</tr>
+          <tr class="time">2:00</tr>
+          <tr class="time">3:00</tr>
+          <tr class="time">4:00</tr>
+          <tr class="time">5:00</tr>
+          <tr class="time">6:00</tr>
+          <tr class="time">7:00</tr>
+          <tr class="time">8:00</tr>
+          <tr class="time">9:00</tr>
+          <tr class="time">10:00</tr>
+          <tr class="time">11:00</tr>
+          <tr class="time">12:00</tr>
+        </div>
+      </table>
+
       <div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
       </div>
-    <!---<input type="text" id="dropHere" value="drop text" ondrop="drop(element)" ondragover="allowDrop(element)"> --->
     </div>
     <div class="right-column">
       <h2>Events<h2>
