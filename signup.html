@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: #e7e7e7;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f6f6f6;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #9DC5EA;
+  color: black;
+  padding: 10px 100px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 10px 20px;
+  background-color: #ee695f;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 15px;
+}
+
+.dropbtn {
+  margin: auto;
+
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #234b6f;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.center {
+  margin: auto;
+  width: 65%;
+  padding: 175px;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+<div class="center">
+<h2> <center> Quarantine boredom? We've got you covered.</h2>
+
+<p>
+<center>
+Input some of your current interests, along with some of the things you’ve always wanted to get into,
+and we’ll plan a day for you.
+<br>
+<br>
+<br>
+We’ll even export to your Google Calendar!
+</p>
+<center> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 20px">
+  <h1 style="font-size:20px;"> Count me in!</h2></button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><p style="text-align:left"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label for="hobbies"><b> Hobbies </b> </label>
+      <p style="font-size:14px; text-align:left"> List a few hobbies that you currently take part in. </p>
+      <input type="text" placeholder="List hobbies here..." name="hobbies" required>
+
+      <label for="interests"><b><p style="text-align:left"> Potential Interests </b></label>
+      <p style="font-size:14px; text-align:left"> List some activities you'd be interested in trying! </p>
+      <input type="text" placeholder = "List interests here..." name="interests" required>
+
+      <p style="text-align:left">Select a timeframe that you'd like to schedule for:</p>
+      <form> <div class="dropbtn">
+         <label for="dropdown"> Start time: </p></label>
+         <select name = "dropdown">
+            <option value = "None" selected> None </option>
+            <option value = "8 AM">8 AM</option>
+            <option value = "9 AM">9 AM</option>
+            <option value = "10 AM">10 AM</option>
+            <option value = "11 AM">11 AM</option>
+            <option value = "12 PM">12 PM</option>
+            <option value = "1 PM">1 PM</option>
+            <option value = "2 PM">2 PM</option>
+            <option value = "3 PM">3 PM</option>
+            <option value = "4 PM">4 PM</option>
+            <option value = "5 PM">5 PM</option>
+            <option value = "6 PM">6 PM</option>
+            <option value = "7 PM">7 PM</option>
+            <option value = "8 PM">8 PM</option>
+            <option value = "9 PM">9 PM</option>
+            <option value = "10 PM">10 PM</option>
+         </select>
+      </form>
+      <br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button style="background-color:#1db954;"type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
