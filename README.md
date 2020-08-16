@@ -1,6 +1,7 @@
 # Extra Hour
 
 URL: https://kellychu202.github.io/todddot/
+Video Walk-through: https://vimeo.com/448331521
 
 ## Inspiration
 As three students living and learning at home, we have all felt the monotony of quarantine come in waves. Like children on an endless road trip, we seem to all be asking "are we there yet?" with no response and nothing to play with but the back of a headrest.
