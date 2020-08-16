@@ -69,3 +69,19 @@ div.content {
   margin-top: 12px;
   margin-left: 24px;
 }
+
+.centercol {
+  float: left;
+  text-align: center;
+  padding-left: 200px;
+  margin-top: 12px;
+  width: 60%;
+}
+
+.rightcol {
+  float: left;
+  text-align: center;
+  padding-left: 200px;
+  margin-top: 12px;
+  width: 25%;
+}
