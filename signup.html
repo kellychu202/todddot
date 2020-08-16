@@ -57,6 +57,7 @@ button:hover {
 .dropbtn {
   margin: auto;
 
+
 }
 /* The Modal (background) */
 .modal {
@@ -135,7 +136,7 @@ and we’ll plan a day for you.
 We’ll even export to your Google Calendar!
 </p>
 <center> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 20px">
-  <h1 style="font-size:20px;"> Count me in!</h2></button>
+  <h1 style="font-size:20px;"> Sign me up!</h2></button>
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -161,10 +162,10 @@ We’ll even export to your Google Calendar!
       <p style="font-size:14px; text-align:left"> List some activities you'd be interested in trying! </p>
       <input type="text" placeholder = "List interests here..." name="interests" required>
 
-      <p style="text-align:left">Select a timeframe that you'd like to schedule for:</p>
+      <p>Select a timeframe that you'd like to schedule for:</p>
       <form> <div class="dropbtn">
-         <label for="dropdown"> Start time: </p></label>
-         <select name = "dropdown">
+         <label for="start"> Start time: </p></label>
+         <select name = "start">
             <option value = "None" selected> None </option>
             <option value = "8 AM">8 AM</option>
             <option value = "9 AM">9 AM</option>
@@ -184,19 +185,43 @@ We’ll even export to your Google Calendar!
          </select>
       </form>
       <br>
+      <form>
+         <label for="end"> End time: </p></label>
+         <select name = "end">
+            <option value = "None" selected> None </option>
+            <option value = "8 AM">8 AM</option>
+            <option value = "9 AM">9 AM</option>
+            <option value = "10 AM">10 AM</option>
+            <option value = "11 AM">11 AM</option>
+            <option value = "12 PM">12 PM</option>
+            <option value = "1 PM">1 PM</option>
+            <option value = "2 PM">2 PM</option>
+            <option value = "3 PM">3 PM</option>
+            <option value = "4 PM">4 PM</option>
+            <option value = "5 PM">5 PM</option>
+            <option value = "6 PM">6 PM</option>
+            <option value = "7 PM">7 PM</option>
+            <option value = "8 PM">8 PM</option>
+            <option value = "9 PM">9 PM</option>
+            <option value = "10 PM">10 PM</option>
+         </select>
+      </form></div>
+      <br>
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
       </label>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button style="background-color:#1db954;"type="submit" class="signupbtn">Sign Up</button>
+        <button onclick ="location.href = 'date_picker.html'" style="background-color:#1db954;"type="submit" class="signupbtn">Sign Up</button>
       </div>
     </div>
   </form>
 </div>
-
+  <a href="date_picker.html"><p><u>Already have an account? Sign in here.</p></u></a>
+  <a href="date_picker.html"><p><u>Sign in as guest</p></u></a>
 <script>
+
 // Get the modal
 var modal = document.getElementById('id01');
 
