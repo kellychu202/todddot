@@ -7,32 +7,27 @@ public class Calendar {
    private Scanner console;
    
    // store the hours + activities for the final calendar
-   private Map<String, Integer> finalCal;
+   private Map<String, Double> finalCal;
    
-   private List<String> activities;
+   private Random rand; 
    
    public Calendar(){
-   
+      finalCal = new HashMap<String, Double>();
+      rand = new Random();
    }
    
    // for random
-   public void create(List<String> list, int maxHours){
-      finalCal = new HashMap<String, Integer>();
-      Random rand = new Random();
-      int remaining = maxHours;
-      while (remaining != 0){
-         int hours = rand.nextInt(3) + 1;
-         int x = rand.nextInt(list.size());
-         if (remaining - hours >= 0){
-            remaining = remaining - hours;
-            String act = list.get(x);
-            finalCal.put(act, hours);
-         }
-      }
-   }
-   public void print(){
-      for (String x : finalCal.keySet()){
-         System.out.println(x + ": " + finalCal.get(x));
-      }
+   public void create(List<String> list, double maxHours){
+       double remaining = maxHours;
+       while (remaining > 0){
+          double hours = (rand.nextInt(6) + 1) * 0.5;
+          int x = rand.nextInt(list.size());
+          if (remaining - hours >= 0){
+             remaining = remaining - hours;
+             String act = list.get(x);
+             finalCal.put(act, hours);
+             System.out.println(act + ": " + hours);
+          }
+       }
    }
 }

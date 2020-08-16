@@ -3,7 +3,7 @@ import java.io.*;
 
 public class CalendarMain {
    // max hours they want to have planned
-   public static final int MAX_HOURS = 13;
+   public static final double MAX_HOURS = 12.0;
    
    // the list of activities 
    public static final String FILE = "activities.txt";
@@ -18,6 +18,5 @@ public class CalendarMain {
       
       Calendar cal = new Calendar();
       cal.create(activities, MAX_HOURS);
-      cal.print();
    }
 }
