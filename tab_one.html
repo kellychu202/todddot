@@ -5,7 +5,24 @@
     <title>Todd Dot</title>
     <meta name="description" content="An interactive getting started guide for Brackets.">
     <link rel="stylesheet" href="style.css">
+    <script>
+      function allowDrop(element) {
+        element.preventDefault();
+      }
+
+      function drag(element) {
+        element.dataTransfer.setData("text", element.target.id);
+      }
+
+      function drop(element) {
+        element.preventDefault();
+        var data = element.dataTransfer.getData("text");
+        element.target.appendChild(document.getElementById(data));
+      }
+    </script>
   </head>
+
+
 
   <body>
     <div class="sidebar">
@@ -15,11 +32,19 @@
     </div>
     <div class="middle-column">
       <h2>Hello Todd, this is tab one!</h2>
+      <div id="dropHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+    <!---<input type="text" id="dropHere" value="drop text" ondrop="drop(element)" ondragover="allowDrop(element)"> --->
     </div>
     <div class="right-column">
       <h2>Events<h2>
       <p>Drag and Drop to Add to Your Day</p>
+      <div id="dragHere" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="dragtext.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width=150px height=50px>
+      </div>
+
     </div>
+
   </body>
 
 </html>
