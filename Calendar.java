@@ -25,9 +25,15 @@ public class Calendar {
           if (remaining - hours >= 0){
              remaining = remaining - hours;
              String act = list.get(x);
-             finalCal.put(act, hours);
-             System.out.println(act + ": " + hours);
+             list.remove(x);
+             finalCal.put(act, hours); 
           }
        }
+   }
+   
+   public void print(){
+      for (String x : finalCal.keySet()){
+         System.out.println(x + ": " + finalCal.get(x));
+      }
    }
 }

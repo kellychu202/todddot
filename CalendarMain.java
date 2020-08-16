@@ -18,5 +18,6 @@ public class CalendarMain {
       
       Calendar cal = new Calendar();
       cal.create(activities, MAX_HOURS);
+      cal.print();
    }
 }
