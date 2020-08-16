@@ -18,14 +18,15 @@ public class Calendar {
    
    // for random
    public void create(List<String> list, double maxHours){
-      if (maxHours != 0){
+      if (maxHours > 0){
+      // gets a double between 1 and 3 with increments of 0.5
          double hours = (rand.nextInt(6) + 1) * 0.5;
          int x = rand.nextInt(list.size());
          if (maxHours - hours >= 0){
             String act = list.get(x);
             finalCal.put(act, hours);
+            create(list, maxHours - hours);
          }
-         create(list, maxHours - hours);
       }
 //       remaining = maxHours;
 //       while (remaining != 0){
