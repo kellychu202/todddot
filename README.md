@@ -1,4 +1,4 @@
-# Extra Hour
+# Hack'20: Extra Hour
 
 URL: https://kellychu202.github.io/todddot/
 Video Walk-through: https://vimeo.com/448331521
